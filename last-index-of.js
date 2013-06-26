@@ -1,13 +1,13 @@
-function lastIndexOf(value, current, original, result) {
+function lastIndexOf(value, current, original, stored) {
   original = original || current;
-  result = result || -1;
+  stored = stored || -1;
   if (current.length) {
     if (current[current.length - 1] === value) {
-      result = original.length - current.length;
+      stored = original.length - current.length;
     }
-    result = lastIndexOf(value, current.slice(0, current.length - 1), original, result)
+    stored = lastIndexOf(value, current.slice(0, current.length - 1), original, stored)
   }
-  return result;
+  return stored;
 }
 
 var a = [1, 2, 4, 6, 5, 2, 7]
