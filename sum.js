@@ -1,5 +1,6 @@
-function sum(a) {
-  if (a.length) return a[a.length - 1] + sum(a.slice(0, a.length - 1));
+function sum(array) {
+  if (array.length) 
+    return array[array.length - 1] + sum(array.slice(0, array.length - 1));
   return 0;
 }
 
